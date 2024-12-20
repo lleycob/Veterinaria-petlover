@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Petlover</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        /* Estilo de los productos */
+        .product-details {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .product-category-header h2 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .product-category {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6 columnas */
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-item h3 {
+            color: #333;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .product-item p {
+            color: #666;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .product-item .price {
+            color: #00b4d8;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .product-item .offer-price {
+            color: red;
+            text-decoration: line-through;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        .add-to-cart {
+            background-color: #00b4d8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #009cb3;
+        }
+
+        /* Media Query para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .product-category {
+                grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+            }
+        }
+
+        /* Media Query para pantallas muy pequeñas (móviles) */
+        @media (max-width: 480px) {
+            .product-category {
+                grid-template-columns: 1fr; /* 1 columna */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content">
+            <img src="imagenes/logo.png" alt="Logo de Petlover">
+            <nav>
+                <a href="index.html" class="active">Inicio</a>
+                <a href="Nosotros.html">Nosotros</a> <!-- Enlace actualizado -->
+                <a href="Servicios.html">Servicios</a>
+                <a href="productos.html">Productos</a>
+                <a href="cesta.html">Cesta</a>
+                <a href="contacto.html">Contactos</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="product-details">
+        <!-- Título de categoría centralizado para los productos de pañales -->
+        <div class="product-category-header">
+            <h2>Productos - Pañales para Mascotas</h2>
+        </div>
+
+        <!-- Sección de productos de pañales (14 productos) -->
+        <div class="product-category">
+            <!-- Producto 1 -->
+            <div class="product-item">
+                <img src="pañal1.avif" alt="Pañal piso entrenamiento talla L 40uni">
+                <h3>Pañal piso entrenamiento talla L 40uni</h3>
+                <p class="price">S/68</p>
+                <p class="offer-price">S/53</p>
+                <button class="add-to-cart" data-id="1" data-name="Pañal piso entrenamiento talla L 40uni" data-price="68" data-image="pañal1.avif">Añadir</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-item">
+                <img src="pañal2.avif" alt="Pañales de Piso Mascotas 60X60">
+                <h3>Pañales de Piso Mascotas 60X60</h3>
+                <p class="price">S/45</p>
+                <button class="add-to-cart" data-id="2" data-name="Pañales de Piso Mascotas 60X60" data-price="45" data-image="pañal2.avif">Añadir</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-item">
+                <img src="pañal3.avif" alt="Pañales desechables para el piso para mascotas talla L">
+                <h3>Pañales desechables para el piso para mascotas talla L</h3>
+                <p class="price">S/60</p>
+                <p class="offer-price">S/40</p>
+                <button class="add-to-cart" data-id="3" data-name="Pañales desechables para el piso para mascotas talla L" data-price="60" data-image="pañal3.avif">Añadir</button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="product-item">
+                <img src="pañal4.avif" alt="Pañales de Piso Absorbentes Desechables para Mascotas S">
+                <h3>Pañales de Piso Absorbentes Desechables para Mascotas S</h3>
+                <p class="price">S/53</p>
+                <p class="offer-price">S/39.10</p>
+                <button class="add-to-cart" data-id="4" data-name="Pañales de Piso Absorbentes Desechables para Mascotas S" data-price="53" data-image="pañal4.avif">Añadir</button>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="product-item">
+                <img src="pañal5.avif" alt="Baño Ecológico de Entrenamiento con Bandeja para Mascotas">
+                <h3>Baño Ecológico de Entrenamiento con Bandeja para Mascotas</h3>
+                <p class="price">S/59.99</p>
+                <p class="offer-price">S/29</p>
+                <button class="add-to-cart" data-id="5" data-name="Baño Ecológico de Entrenamiento con Bandeja para Mascotas" data-price="59.99" data-image="pañal5.avif">Añadir</button>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="product-item">
+                <img src="pañal6.avif" alt="Pañales de Piso Absorbentes para Mascotas L - 30 unidades">
+                <h3>Pañales de Piso Absorbentes para Mascotas L - 30 unidades</h3>
+                <p class="price">S/56.25</p>
+                <p class="offer-price">S/39.90</p>
+                <button class="add-to-cart" data-id="6" data-name="Pañales de Piso Absorbentes para Mascotas L - 30 unidades" data-price="56.25" data-image="pañal6.avif">Añadir</button>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="product-item">
+                <img src="pañal7.avif" alt="Pañal para Mascotas Hembra Talla M">
+                <h3>Pañal para Mascotas Hembra Talla M</h3>
+                <p class="price">S/59.90</p>
+                <p class="offer-price">S/39.90</p>
+                <button class="add-to-cart" data-id="7" data-name="Pañal para Mascotas Hembra Talla M" data-price="59.90" data-image="pañal7.avif">Añadir</button>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="product-item">
+                <img src="paña8.avif" alt="Pañal para Mascotas Hembra Talla S">
+                <h3>Pañal para Mascotas Hembra Talla S</h3>
+                <p class="price">S/49.90</p>
+                <p class="offer-price">S/29.90</p>
+                <button class="add-to-cart" data-id="8" data-name="Pañal para Mascotas Hembra Talla S" data-price="49.90" data-image="paña8.avif">Añadir</button>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="product-item">
+                <img src="pañal9.avif" alt="Pañales para Mascotas Súper Absorbente Talla M">
+                <h3>Pañales para Mascotas Súper Absorbente Talla M</h3>
+                <p class="price">S/69.90</p>
+                <p class="offer-price">S/44</p>
+                <button class="add-to-cart" data-id="9" data-name="Pañales para Mascotas Súper Absorbente Talla M" data-price="69.90" data-image="pañal9.avif">Añadir</button>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="product-item">
+                <img src="pañal10.avif" alt="Pañal para mascotas Hembra Talla XL 6035cm">
+                <h3>Pañal para mascotas Hembra Talla XL 6035cm</h3>
+                <p class="price">S/45</p>
+                <p class="offer-price">S/23</p>
+                <button class="add-to-cart" data-id="10" data-name="Pañal para mascotas Hembra Talla XL 6035cm" data-price="45" data-image="pañal10.avif">Añadir</button>
+            </div>
+
+            <!-- Producto 11 -->
+            <div class="product-item">
+                <img src="pañal11.avif" alt="Pañal para mascotas Hembra Talla L 52x32cm">
+                <h3>Pañal para mascotas Hembra Talla L 52x32cm</h3>
+                <p class="price">S/44.90</p>
+                <p class="offer-price">S/22</p>
+                <button class="add-to-cart" data-id="11" data-name="Pañal para mascotas Hembra Talla L 52x32cm" data-price="44.90" data-image="pañal11.avif">Añadir</button>
+            </div>
+
+            <!-- Producto 12 -->
+            <div class="product-item">
+                <img src="pañal 12.avif" alt="Pañal para mascotas Hembra L 34-50cm">
+                <h3>Pañal para mascotas Hembra L 34-50cm</h3>
+                <p class="price">S/35</p>
+                <p class="offer-price">S/22</p>
+                <button class="add-to-cart" data-id="12" data-name="Pañal para mascotas Hembra L 34-50cm" data-price="35" data-image="pañal 12.avif">Añadir</button>
+            </div>
+        </div>
+    </section>
+    <script src="carrito.js"></script>
+</body>
+</html>

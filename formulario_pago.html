@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago - Petlover</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .payment-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 50px auto;
+        }
+
+        .payment-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .payment-form input,
+        .payment-form select,
+        .payment-form button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .payment-form button {
+            background-color: #00b4d8;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-form button:hover {
+            background-color: #009cb3;
+        }
+
+        .pay-info {
+            font-size: 16px;
+            color: #333;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .pay-info span {
+            font-weight: bold;
+            color: #00b4d8;
+        }
+
+        .pay-info .highlight {
+            font-size: 18px;
+            color: #f44336;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content">
+            <img src="imagenes/logo.png" alt="Logo de Petlover">
+            <nav>
+                <a href="index.html" class="active">Inicio</a>
+                <a href="Nosotros.html">Nosotros</a> <!-- Enlace actualizado -->
+                <a href="Servicios.html">Servicios</a>
+                <a href="productos.html">Productos</a>
+                <a href="cesta.html">Cesta</a>
+                <a href="contacto.html">Contactos</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="payment-form">
+        <h2>Formulario de Pago</h2>
+        <form id="paymentForm">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre Completo" required>
+            <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+            <input type="text" id="direccion" name="direccion" placeholder="Dirección de Envío" required>
+            <input type="text" id="dni" name="dni" placeholder="DNI" required maxlength="8" pattern="[0-9]{8}" title="El DNI debe tener 8 dígitos numéricos.">
+
+            <!-- Selección de País -->
+            <select name="pais" id="pais" required>
+                <option value="">Seleccionar País</option>
+                <option value="Perú">Perú</option>
+                <option value="Canadá">Canadá</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Colombia">Colombia</option>
+                <option value="México">México</option>
+            </select>
+
+            <!-- Selección de Departamento -->
+            <select name="departamento" id="departamento" required>
+                <option value="">Seleccionar Departamento</option>
+                <option value="Amazonas">Amazonas</option>
+                <option value="Áncash">Áncash</option>
+                <option value="Apurímac">Apurímac</option>
+                <option value="Arequipa">Arequipa</option>
+                <option value="Ayacucho">Ayacucho</option>
+                <option value="Cajamarca">Cajamarca</option>
+                <option value="Callao">Callao</option>
+                <option value="Cusco">Cusco</option>
+                <option value="Huancavelica">Huancavelica</option>
+                <option value="Huánuco">Huánuco</option>
+                <option value="Ica">Ica</option>
+                <option value="Junín">Junín</option>
+                <option value="La Libertad">La Libertad</option>
+                <option value="Lambayeque">Lambayeque</option>
+                <option value="Lima">Lima</option>
+                <option value="Loreto">Loreto</option>
+                <option value="Madre de Dios">Madre de Dios</option>
+                <option value="Moquegua">Moquegua</option>
+                <option value="Pasco">Pasco</option>
+                <option value="Piura">Piura</option>
+                <option value="Puno">Puno</option>
+                <option value="San Martín">San Martín</option>
+                <option value="Tacna">Tacna</option>
+                <option value="Tumbes">Tumbes</option>
+                <option value="Ucayali">Ucayali</option>
+            </select>
+
+            <!-- Selección de Ciudad -->
+            <select name="ciudad" id="ciudad" required>
+                <option value="">Seleccionar Ciudad</option>
+            </select>
+
+            <!-- Métodos de pago -->
+            <select name="metodo-pago" id="metodo-pago" required>
+                <option value="">Seleccionar Método de Pago</option>
+                <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                <option value="paypal">PayPal</option>
+                <option value="yape">Yape</option>
+                <option value="efectivo">Pago Contra Entrega</option>
+            </select>
+
+            <!-- Tarjeta de Crédito Información -->
+            <div id="tarjeta-info" style="display:none;">
+                <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="Número de Tarjeta" maxlength="16" pattern="[0-9]{16}" title="El número de tarjeta debe tener exactamente 16 dígitos numéricos." oninput="validateNumericInput(event)">
+                <input type="text" id="fecha-expiracion" name="fecha-expiracion" placeholder="Fecha de Expiración (MM/AA)" maxlength="5" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" title="La fecha debe tener el formato MM/AA (por ejemplo, 12/24)">
+                <input type="text" id="cvv" name="cvv" placeholder="CVV" maxlength="3" pattern="[0-9]{3}" title="El CVV debe tener 3 dígitos numéricos." oninput="validateNumericInput(event)">
+            </div>
+
+            <div id="paypal-info" class="pay-info" style="display:none;">
+                <span class="highlight">Usa tu cuenta PayPal para pagar o realiza el pago a través de la siguiente cuenta:</span><br>
+                <span>paypal@petlover.com</span>
+            </div>
+
+            <div id="yape-info" class="pay-info" style="display:none;">
+                <span class="highlight">Para realizar el pago con Yape, usa el número:</span><br>
+                <span>9294886150</span>
+            </div>
+
+            <button type="submit">Completar Compra</button>
+        </form>
+    </section>
+
+    <script>
+        // Cambiar las ciudades según el departamento seleccionado
+        const departamentosCiudades = {
+            "Amazonas": ["Chachapoyas", "Bagua", "Balsas", "Cajaruro", "Colasay", "El Milagro", "Granada", "Luya", "María", "Molinopampa"],
+            "Áncash": ["Huaraz", "Chimbote", "Aija", "Antonio Raimondi", "Bolognesi", "Carhuaz", "Carlos Fermín Fitzcarrald", "Casma", "Corongo", "Huaraz"],
+            "Apurímac": ["Abancay", "Andahuaylas", "Antabamba", "Aymaraes", "Chalhuanca", "Cotabambas", "Grau", "Guayana", "Puquio", "Tambo"],
+            "Arequipa": ["Arequipa", "Caylloma", "Castilla", "Condesuyos", "La Unión", "Islay", "Camaná", "Aplao", "Vitor", "Majes"],
+            "Ayacucho": ["Ayacucho", "Cangallo", "Huamanga", "Huancaray", "La Mar", "Sucre", "Vinchos", "Sancos", "Huanta", "Luricocha"],
+            "Cajamarca": ["Cajamarca", "Celendín", "Chota", "Cutervo", "Hualgayoc", "Jaén", "San Ignacio", "San Marcos", "San Pablo", "San Miguel"],
+            "Callao": ["Callao"],
+            "Cusco": ["Cusco", "Acomayo", "Anta", "Calca", "Canas", "Canchis", "Chumbivilcas", "Espinar", "La Convención", "Paruro", "Paucartambo", "Quispicanchi", "Urubamba"],
+            "Huancavelica": ["Huancavelica", "Acobamba", "Angaraes", "Castrovirreyna", "Churcampa", "Huaytará", "Tayacaja"],
+            "Huánuco": ["Huánuco", "Ambo", "Dos de Mayo", "Huaraz", "Leoncio Prado", "Marañón", "Pachitea", "Rupa Rupa", "Yarowilca"],
+            "Ica": ["Ica", "Chincha", "Nazca", "Palpa", "Pisco", "Nasca"],
+            "Junín": ["Huancayo", "Chanchamayo", "Concepción", "Jauja", "Junín", "Satipo", "Tarma", "Yauli"],
+            "La Libertad": ["Trujillo", "Ascope", "Bolívar", "Chepén", "Gran Chimu", "Julcán", "Otuzco", "Pataz", "Sánchez Carrión", "Virú"],
+            "Lambayeque": ["Chiclayo", "Ferreñafe", "Lambayeque"],
+            "Lima": ["Lima", "Barranca", "Cañete", "Huaral", "Huarochirí", "Huaura", "Yauyos", "Canta", "Callejón de Huaylas", "Chancay"],
+            "Loreto": ["Iquitos", "Alto Amazonas", "Datem del Marañón", "Loreto", "Requena", "Ucayali"],
+            "Madre de Dios": ["Puerto Maldonado", "Manu", "Tambopata", "Inambari"],
+            "Moquegua": ["Moquegua", "Ilo", "Mariscal Nieto"],
+            "Pasco": ["Pasco", "Daniel Alcides Carrión", "Oxapampa"],
+            "Piura": ["Piura", "Ayabaca", "Huancabamba", "Morropón", "Paita", "Sullana", "Tumbes"],
+            "Puno": ["Puno", "Azángaro", "Carabaya", "Chucuito", "El Collao", "Huancané", "Lampa", "Melgar", "San Antonio de Putina", "San Román", "Sandia", "Yunguyo"],
+            "San Martín": ["Moyobamba", "Bellavista", "El Dorado", "Huallaga", "Lamas", "Mariscal Cáceres", "Picota", "Rioja"],
+            "Tacna": ["Tacna", "Candarave", "Jorge Basadre", "Tarata"],
+            "Tumbes": ["Tumbes", "Contralmirante Villar", "Zarumilla"],
+            "Ucayali": ["Pucallpa", "Atalaya", "Coronel Portillo", "Purús"]
+        };
+
+        const departamentoSelect = document.getElementById('departamento');
+        const ciudadSelect = document.getElementById('ciudad');
+
+        departamentoSelect.addEventListener('change', function() {
+            const departamento = this.value;
+            ciudadSelect.innerHTML = '<option value="">Seleccionar Ciudad</option>';  // Reset cities options
+            if (departamento && departamentosCiudades[departamento]) {
+                departamentosCiudades[departamento].forEach(function(ciudad) {
+                    const option = document.createElement('option');
+                    option.value = ciudad;
+                    option.textContent = ciudad;
+                    ciudadSelect.appendChild(option);
+                });
+            }
+        });
+
+        // Mostrar información de pago según el método seleccionado
+        const metodoPagoSelect = document.getElementById('metodo-pago');
+        const tarjetaInfoDiv = document.getElementById('tarjeta-info');
+        const paypalInfoDiv = document.getElementById('paypal-info');
+        const yapeInfoDiv = document.getElementById('yape-info');
+
+        metodoPagoSelect.addEventListener('change', function () {
+            if (this.value === 'tarjeta') {
+                tarjetaInfoDiv.style.display = 'block';
+                paypalInfoDiv.style.display = 'none';
+                yapeInfoDiv.style.display = 'none';
+            } else if (this.value === 'paypal') {
+                tarjetaInfoDiv.style.display = 'none';
+                paypalInfoDiv.style.display = 'block';
+                yapeInfoDiv.style.display = 'none';
+            } else if (this.value === 'yape') {
+                tarjetaInfoDiv.style.display = 'none';
+                paypalInfoDiv.style.display = 'none';
+                yapeInfoDiv.style.display = 'block';
+            } else {
+                tarjetaInfoDiv.style.display = 'none';
+                paypalInfoDiv.style.display = 'none';
+                yapeInfoDiv.style.display = 'none';
+            }
+        });
+
+        // Función para validar que solo se ingresen números
+        function validateNumericInput(event) {
+            const input = event.target;
+            input.value = input.value.replace(/\D/g, ''); // Eliminar caracteres no numéricos
+        }
+    </script>
+</body>
+</html>

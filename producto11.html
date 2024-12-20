@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Petlover</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        /* Estilo de los productos */
+        .product-details {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .product-category-header h2 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .product-category {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-item h3 {
+            color: #333;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .product-item p {
+            color: #666;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .product-item .price {
+            color: #00b4d8;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .product-item .offer-price {
+            color: red;
+            text-decoration: line-through;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        .add-to-cart {
+            background-color: #00b4d8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #009cb3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content">
+            <img src="imagenes/logo.png" alt="Logo de Petlover">
+            <nav>
+                <a href="index.html" class="active">Inicio</a>
+                <a href="Nosotros.html">Nosotros</a> <!-- Enlace actualizado -->
+                <a href="Servicios.html">Servicios</a>
+                <a href="productos.html">Productos</a>
+                <a href="cesta.html">Cesta</a>
+                <a href="contacto.html">Contactos</a>
+            </nav>
+        </div>
+    </header>
+
+<section class="product-details">
+    <!-- Título de categoría centralizado para las camas de perros -->
+    <div class="product-category-header">
+        <h2>Camas para Perros y Mascotas</h2>
+    </div>
+
+    <!-- Sección de productos de camas para perros (12 productos) -->
+    <div class="product-category">
+        <!-- Producto 1 -->
+        <div class="product-item">
+            <img src="cama1.avif" alt="Cama para Perros 90x75cm XXL">
+            <h3>Cama para Perros 90x75cm Talla XXL Antialérgica y Lavable</h3>
+            <p class="price">S/ 279.90</p>
+            <p class="offer-price">S/ 189.90</p>
+            <button class="add-to-cart" data-id="cama1" data-name="Cama para Perros 90x75cm Talla XXL Antialérgica y Lavable" data-price="279.90" data-image="cama1.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-item">
+            <img src="cama2{.avif" alt="Cama para Perros 90x75cm XXL">
+            <h3>Cama para Perros 90x75cm Talla XXL Antialérgica y Lavable</h3>
+            <p class="price">S/ 279.90</p>
+            <p class="offer-price">S/ 189.90</p>
+            <button class="add-to-cart" data-id="cama2" data-name="Cama para Perros 90x75cm Talla XXL Antialérgica y Lavable" data-price="279.90" data-image="cama2.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-item">
+            <img src="cama3.avif" alt="Sofa Cama para Mascotas Talla L">
+            <h3>Sofa Cama para Mascotas Talla L</h3>
+            <p class="price">S/ 114.90</p>
+            <p class="offer-price">S/ 89.90</p>
+            <button class="add-to-cart" data-id="cama3" data-name="Sofa Cama para Mascotas Talla L" data-price="114.90" data-image="cama3.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product-item">
+            <img src="cama4.avif" alt="Sofá/Cama para Mascotas Talla XL Azul">
+            <h3>Sofá/Cama para Mascotas Talla XL Azul</h3>
+            <p class="price">S/ 59.90</p>
+            <p class="offer-price">S/ 49.90</p>
+            <button class="add-to-cart" data-id="cama4" data-name="Sofá/Cama para Mascotas Talla XL Azul" data-price="59.90" data-image="cama4.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="product-item">
+            <img src="cama5.avif" alt="Sofá/Cama para Mascotas Talla S Marrón">
+            <h3>Sofá/Cama para Mascotas Talla S Marrón</h3>
+            <p class="price">S/ 59.90</p>
+            <button class="add-to-cart" data-id="cama5" data-name="Sofá/Cama para Mascotas Talla S Marrón" data-price="59.90" data-image="cama5.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="product-item">
+            <img src="cama6.avif" alt="Cama para Perros 70x60cm Talla L">
+            <h3>Cama para Perros 70x60cm Talla L Antialérgica y Lavable</h3>
+            <p class="price">S/ 229.90</p>
+            <p class="offer-price">S/ 139.90</p>
+            <button class="add-to-cart" data-id="cama6" data-name="Cama para Perros 70x60cm Talla L Antialérgica y Lavable" data-price="229.90" data-image="cama6.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="product-item">
+            <img src="cama7.avif" alt="Cama Ortopédica para Perro Talla 6">
+            <h3>Cama Ortopédica para Perro Talla 6 (Mide 89x56 cm Negro)</h3>
+            <p class="price">S/ 359.00</p>
+            <p class="offer-price">S/ 299.90</p>
+            <button class="add-to-cart" data-id="cama7" data-name="Cama Ortopédica para Perro Talla 6" data-price="359.00" data-image="cama7.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="product-item">
+            <img src="cama8.avif" alt="Cama Mascota Bumer Medium Villa Hogar">
+            <h3>Cama Mascota Bumer Medium - Villa Hogar</h3>
+            <p class="price">S/ 635.00</p>
+            <p class="offer-price">S/ 359.00</p>
+            <button class="add-to-cart" data-id="cama8" data-name="Cama Mascota Bumer Medium - Villa Hogar" data-price="635.00" data-image="cama8.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 9 -->
+        <div class="product-item">
+            <img src="cama9.avif" alt="Cama para Perros de Algodón Gris Talla 1">
+            <h3>Cama para Perros de Algodón Gris Talla 1</h3>
+            <p class="price">S/ 39.90</p>
+            <button class="add-to-cart" data-id="cama9" data-name="Cama para Perros de Algodón Gris Talla 1" data-price="39.90" data-image="cama9.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 10 -->
+        <div class="product-item">
+            <img src="cama10.avif" alt="Cama Cuadrada para Mascota Talla S - Rojo">
+            <h3>Cama Cuadrada para Mascota Talla S - Rojo</h3>
+            <p class="price">S/ 89.00</p>
+            <p class="offer-price">S/ 79.00</p>
+            <button class="add-to-cart" data-id="cama10" data-name="Cama Cuadrada para Mascota Talla S - Rojo" data-price="89.00" data-image="cama10.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 11 -->
+        <div class="product-item">
+            <img src="cama11.avif" alt="Cama Mascota Forma de Tiburón - Rosa - M">
+            <h3>Cama Mascota Forma de Tiburón - Rosa - M</h3>
+            <p class="price">S/ 149.00</p>
+            <p class="offer-price">S/ 129.00</p>
+            <button class="add-to-cart" data-id="cama11" data-name="Cama Mascota Forma de Tiburón - Rosa - M" data-price="149.00" data-image="cama11.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 12 -->
+        <div class="product-item">
+            <img src="cama12.avif" alt="Cama Mascota Bumer Medium - Villa Hogar">
+            <h3>Cama Mascota Bumer Medium - Villa Hogar</h3>
+            <p class="price">S/ 635.00</p>
+            <p class="offer-price">S/ 359.00</p>
+            <button class="add-to-cart" data-id="cama12" data-name="Cama Mascota Bumer Medium - Villa Hogar" data-price="635.00" data-image="cama12.avif">Añadir</button>
+        </div>
+    </div>
+</section>
+<script src="carrito.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago - Petlover</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .payment-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 50px auto;
+        }
+
+        .payment-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .payment-form input,
+        .payment-form select,
+        .payment-form button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .payment-form button {
+            background-color: #00b4d8;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-form button:hover {
+            background-color: #009cb3;
+        }
+
+        .pay-info {
+            font-size: 16px;
+            color: #333;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .pay-info span {
+            font-weight: bold;
+            color: #00b4d8;
+        }
+
+        .pay-info .highlight {
+            font-size: 18px;
+            color: #f44336;
+            font-weight: bold;
+        }
+
+        /* Contenedor principal */
+        .container {
+            padding: 100px 50px;
+        }
+
+        /* Estilo para las sedes */
+        .sedes-section {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .sede {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            height: 250px;
+            transition: transform 0.3s;
+        }
+
+        .sede:hover {
+            transform: translateY(-10px);
+        }
+
+        .sede h3 {
+            color: #333;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .sede p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .sede .telefono {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Estilo para la reserva de cita */
+        .reserva-cita {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px; /* Ajusté el tamaño del bloque para hacerlo más ancho */
+    margin: 0 auto; /* Asegura que se centre el bloque */
+}
+
+        .reserva-cita h2 {
+            color: #87CEEB; /* Celeste */
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .reserva-cita select, .reserva-cita input {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1.1em;
+            width: 100%;
+            max-width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .reserva-cita button {
+            padding: 10px 20px;
+            background-color: #87CEEB;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .reserva-cita button:hover {
+            background-color: #00b4d8;
+        }
+
+        .reserva-cita .confirmacion {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: green;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="content">
+            <img src="imagenes/logo.png" alt="Logo de Petlover">
+            <nav>
+                <a href="index.html" class="active">Inicio</a>
+                <a href="Nosotros.html">Nosotros</a> <!-- Enlace actualizado -->
+                <a href="Servicios.html">Servicios</a>
+                <a href="productos.html">Productos</a>
+                <a href="cesta.html">Cesta</a>
+                <a href="contacto.html">Contactos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <!-- Sección de sedes -->
+        <section>
+            <h2 style="text-align:center; color: #333; font-size: 2.5em; font-weight: bold; margin-bottom: 50px; text-transform: uppercase;">Nuestras Sedes</h2>
+            <div class="sedes-section">
+                <!-- Repite las siguientes divs para las 15 sedes -->
+                <div class="sede">
+                    <h3>Sede Lima</h3>
+                    <p>Calle Ficticia 123, Lima, Perú</p>
+                    <p class="telefono">Teléfono: +51 123 456 789</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Arequipa</h3>
+                    <p>Avenida Ejemplo 456, Arequipa, Perú</p>
+                    <p class="telefono">Teléfono: +51 987 654 321</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Cusco</h3>
+                    <p>Calle de la Salud 789, Cusco, Perú</p>
+                    <p class="telefono">Teléfono: +51 456 789 123</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Trujillo</h3>
+                    <p>Avenida Libertad 1020, Trujillo, Perú</p>
+                    <p class="telefono">Teléfono: +51 321 654 987</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Piura</h3>
+                    <p>Calle Sol 321, Piura, Perú</p>
+                    <p class="telefono">Teléfono: +51 987 123 654</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Iquitos</h3>
+                    <p>Avenida Amazonas 1200, Iquitos, Perú</p>
+                    <p class="telefono">Teléfono: +51 123 654 987</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Chiclayo</h3>
+                    <p>Calle Santa Rosa 345, Chiclayo, Perú</p>
+                    <p class="telefono">Teléfono: +51 234 567 890</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Huaraz</h3>
+                    <p>Calle Ficticia 123, Huaraz, Perú</p>
+                    <p class="telefono">Teléfono: +51 345 678 901</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Cajamarca</h3>
+                    <p>Calle Ejemplo 789, Cajamarca, Perú</p>
+                    <p class="telefono">Teléfono: +51 456 789 012</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Ayacucho</h3>
+                    <p>Calle Real 500, Ayacucho, Perú</p>
+                    <p class="telefono">Teléfono: +51 567 890 123</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Tarapoto</h3>
+                    <p>Avenida de la Selva 890, Tarapoto, Perú</p>
+                    <p class="telefono">Teléfono: +51 678 901 234</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Puno</h3>
+                    <p>Calle del Sol 456, Puno, Perú</p>
+                    <p class="telefono">Teléfono: +51 789 012 345</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Moquegua</h3>
+                    <p>Calle 123, Moquegua, Perú</p>
+                    <p class="telefono">Teléfono: +51 890 123 456</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Tumbes</h3>
+                    <p>Calle Costanera 100, Tumbes, Perú</p>
+                    <p class="telefono">Teléfono: +51 901 234 567</p>
+                </div>
+                <div class="sede">
+                    <h3>Sede Huancayo</h3>
+                    <p>Avenida Principal 2020, Huancayo, Perú</p>
+                    <p class="telefono">Teléfono: +51 234 567 890</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reserva de cita -->
+        <section class="reserva-cita">
+            <h2>Reserva tu Cita</h2>
+            <form id="form-reserva">
+                <select id="sede" required>
+                    <option value="">Elige tu sede</option>
+                    <option value="lima">Sede Lima</option>
+                    <option value="arequipa">Sede Arequipa</option>
+                    <option value="cusco">Sede Cusco</option>
+                    <option value="trujillo">Sede Trujillo</option>
+                    <option value="piura">Sede Piura</option>
+                    <option value="iquitos">Sede Iquitos</option>
+                    <option value="chiclayo">Sede Chiclayo</option>
+                    <option value="huaraz">Sede Huaraz</option>
+                    <option value="cajamarca">Sede Cajamarca</option>
+                    <option value="ayacucho">Sede Ayacucho</option>
+                    <option value="tarapoto">Sede Tarapoto</option>
+                    <option value="puno">Sede Puno</option>
+                    <option value="moquegua">Sede Moquegua</option>
+                    <option value="tumbes">Sede Tumbes</option>
+                    <option value="huancayo">Sede Huancayo</option>
+                </select>
+
+                <input type="date" id="fecha" required>
+                <input type="time" id="hora" required>
+                <button type="submit">Confirmar Reserva</button>
+                <p class="confirmacion" id="confirmacion"></p>
+            </form>
+        </section>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Petlover. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('form-reserva').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const sede = document.getElementById('sede').value;
+            const fecha = document.getElementById('fecha').value;
+            const hora = document.getElementById('hora').value;
+
+            if (sede && fecha && hora) {
+                document.getElementById('confirmacion').textContent = `¡Tu cita para la sede ${sede.charAt(0).toUpperCase() + sede.slice(1)} ha sido confirmada para el ${fecha} a las ${hora}!`;
+            } else {
+                document.getElementById('confirmacion').textContent = 'Por favor, completa todos los campos.';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Petlover</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        /* Estilo de los productos */
+        .product-details {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .product-category-header h2 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .product-category {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-item h3 {
+            color: #333;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .product-item p {
+            color: #666;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .product-item .price {
+            color: #00b4d8;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .product-item .offer-price {
+            color: red;
+            text-decoration: line-through;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        .add-to-cart {
+            background-color: #00b4d8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #009cb3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content">
+            <img src="imagenes/logo.png" alt="Logo de Petlover">
+            <nav>
+                <a href="index.html" class="active">Inicio</a>
+                <a href="Nosotros.html">Nosotros</a> <!-- Enlace actualizado -->
+                <a href="Servicios.html">Servicios</a>
+                <a href="productos.html">Productos</a>
+                <a href="cesta.html">Cesta</a>
+                <a href="contacto.html">Contactos</a>
+            </nav>
+        </div>
+    </header>
+
+<section class="product-details">
+    <div class="product-category-header">
+        <h2>Ropa para Mascotas</h2>
+    </div>
+
+    <div class="product-category">
+        <!-- Producto 1 -->
+        <div class="product-item">
+            <img src="ropa1.jpg" alt="Ropa Capucha polera de algodón para Mascotas - Negro TL -T4">
+            <h3>Ropa Capucha polera de algodón para Mascotas - Negro TL -T4</h3>
+            <p class="price">S/39.90</p>
+            <p class="offer-price">S/47</p>
+            <button class="add-to-cart" data-id="1" data-name="Ropa Capucha polera de algodón para Mascotas - Negro TL -T4" data-price="39.90" data-image="ropa1.jpg">Añadir</button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-item">
+            <img src="ropa2.webp" alt="Ropa para mascota - Vestido impermeable - Talla 5">
+            <h3>Ropa para mascota - Vestido impermeable - Talla 5</h3>
+            <p class="price">S/37</p>
+            <p class="offer-price">S/45</p>
+            <button class="add-to-cart" data-id="2" data-name="Ropa para mascota - Vestido impermeable - Talla 5" data-price="37" data-image="ropa2.webp">Añadir</button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-item">
+            <img src="ropa3.jpg" alt="Reno Navideño para Mascota Talla 0">
+            <h3>Reno Navideño para Mascota Talla 0</h3>
+            <p class="price">S/24.90</p>
+            <p class="offer-price">S/30</p>
+            <button class="add-to-cart" data-id="3" data-name="Reno Navideño para Mascota Talla 0" data-price="24.90" data-image="ropa3.jpg">Añadir</button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product-item">
+            <img src="ropa4.jpg" alt="SUETER ONDAS LILA S PARA MASCOTAS PRETTY PET">
+            <h3>SUETER ONDAS LILA S PARA MASCOTAS PRETTY PET</h3>
+            <p class="price">S/35.50</p>
+            <p class="offer-price">S/51</p>
+            <button class="add-to-cart" data-id="4" data-name="SUETER ONDAS LILA S PARA MASCOTAS PRETTY PET" data-price="35.50" data-image="ropa4.jpg">Añadir</button>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="product-item">
+            <img src="ropa5.avif" alt="Vestido GOLDEN para mascotas">
+            <h3>Vestido GOLDEN para mascotas</h3>
+            <p class="price">S/60</p>
+            <button class="add-to-cart" data-id="5" data-name="Vestido GOLDEN para mascotas" data-price="60" data-image="ropa5.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="product-item">
+            <img src="ropa6.avif" alt="ZAPATOS IMPERMEABLES PARA PERROS Y MASCOTAS FUCSIA-S">
+            <h3>ZAPATOS IMPERMEABLES PARA PERROS Y MASCOTAS FUCSIA-S</h3>
+            <p class="price">S/26.90</p>
+            <p class="offer-price">S/40</p>
+            <button class="add-to-cart" data-id="6" data-name="ZAPATOS IMPERMEABLES PARA PERROS Y MASCOTAS FUCSIA-S" data-price="26.90" data-image="ropa6.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="product-item">
+            <img src="ropa7.avif" alt="Ropa traje para perrogato Talla S">
+            <h3>Ropa traje para perrogato Talla S</h3>
+            <p class="price">S/24</p>
+            <button class="add-to-cart" data-id="7" data-name="Ropa traje para perrogato Talla S" data-price="24" data-image="ropa7.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="product-item">
+            <img src="ropa8.avif" alt="GORRO DE GRADUACION AJUSTABLE PARA MASCOTAS">
+            <h3>GORRO DE GRADUACION AJUSTABLE PARA MASCOTAS</h3>
+            <p class="price">S/25</p>
+            <p class="offer-price">S/59.90</p>
+            <button class="add-to-cart" data-id="8" data-name="GORRO DE GRADUACION AJUSTABLE PARA MASCOTAS" data-price="25" data-image="ropa8.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 9 -->
+        <div class="product-item">
+            <img src="ropa9.avif" alt="Dizfraz Enterizo Chavo Talla 0">
+            <h3>Dizfraz Enterizo Chavo Talla 0</h3>
+            <p class="price">S/17.99</p>
+            <p class="offer-price">S/45</p>
+            <button class="add-to-cart" data-id="9" data-name="Dizfraz Enterizo Chavo Talla 0" data-price="17.99" data-image="ropa9.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 10 -->
+        <div class="product-item">
+            <img src="ropa10.avif" alt="Camiseta Perro con logo amarillo M">
+            <h3>Camiseta Perro con logo amarillo M</h3>
+            <p class="price">S/28</p>
+            <button class="add-to-cart" data-id="10" data-name="Camiseta Perro con logo amarillo M" data-price="28" data-image="ropa10.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 11 -->
+        <div class="product-item">
+            <img src="ropa11.avif" alt="Ropa para perrito deportiva Talla M">
+            <h3>Ropa para perrito deportiva Talla M</h3>
+            <p class="price">S/32.50</p>
+            <button class="add-to-cart" data-id="11" data-name="Ropa para perrito deportiva Talla M" data-price="32.50" data-image="ropa11.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 12 -->
+        <div class="product-item">
+            <img src="ropa12.avif" alt="Abrigo impermeable para perros">
+            <h3>Abrigo impermeable para perros</h3>
+            <p class="price">S/50</p>
+            <button class="add-to-cart" data-id="12" data-name="Abrigo impermeable para perros" data-price="50" data-image="ropa12.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 13 -->
+        <div class="product-item">
+            <img src="ropa13.avif" alt="Suéter de lana para mascotas Talla L">
+            <h3>Suéter de lana para mascotas Talla L</h3>
+            <p class="price">S/45</p>
+            <button class="add-to-cart" data-id="13" data-name="Suéter de lana para mascotas Talla L" data-price="45" data-image="ropa13.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 14 -->
+        <div class="product-item">
+            <img src="ropa14.avif" alt="Vestido corto para perros pequeños">
+            <h3>Vestido corto para perros pequeños</h3>
+            <p class="price">S/55</p>
+            <button class="add-to-cart" data-id="14" data-name="Vestido corto para perros pequeños" data-price="55" data-image="ropa14.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 15 -->
+        <div class="product-item">
+            <img src="ropa15.avif" alt="Camiseta para perros con diseño floral">
+            <h3>Camiseta para perros con diseño floral</h3>
+            <p class="price">S/40</p>
+            <button class="add-to-cart" data-id="15" data-name="Camiseta para perros con diseño floral" data-price="40" data-image="ropa15.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 16 -->
+        <div class="product-item">
+            <img src="ropa16.avif" alt="Chaqueta deportiva para perros">
+            <h3>Chaqueta deportiva para perros</h3>
+            <p class="price">S/35</p>
+            <button class="add-to-cart" data-id="16" data-name="Chaqueta deportiva para perros" data-price="35" data-image="ropa16.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 17 -->
+        <div class="product-item">
+            <img src="ropa17.webp" alt="Pantalones impermeables para perros">
+            <h3>Pantalones impermeables para perros</h3>
+            <p class="price">S/29.99</p>
+            <button class="add-to-cart" data-id="17" data-name="Pantalones impermeables para perros" data-price="29.99" data-image="ropa17.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 18 -->
+        <div class="product-item">
+            <img src="ropa18.webp" alt="Jacket cálido para mascotas Talla XS">
+            <h3>Jacket cálido para mascotas Talla XS</h3>
+            <p class="price">S/41.50</p>
+            <button class="add-to-cart" data-id="18" data-name="Jacket cálido para mascotas Talla XS" data-price="41.50" data-image="ropa18.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 19 -->
+        <div class="product-item">
+            <img src="ropa19.jpg" alt="Ropa de invierno para perros pequeños">
+            <h3>Ropa de invierno para perros pequeños</h3>
+            <p class="price">S/49</p>
+            <button class="add-to-cart" data-id="19" data-name="Ropa de invierno para perros pequeños" data-price="49" data-image="ropa19.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 20 -->
+        <div class="product-item">
+            <img src="ropa20.webp" alt="Buzo de algodón para perros Talla S">
+            <h3>Buzo de algodón para perros Talla S</h3>
+            <p class="price">S/33.50</p>
+            <button class="add-to-cart" data-id="20" data-name="Buzo de algodón para perros Talla S" data-price="33.50" data-image="ropa20.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 21 -->
+        <div class="product-item">
+            <img src="ropa21.webp"Suéter de navidad para perros">
+            <h3>Suéter de navidad para perros</h3>
+            <p class="price">S/30</p>
+            <button class="add-to-cart" data-id="21" data-name="Suéter de navidad para perros" data-price="30" data-image="ropa21.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 22 -->
+        <div class="product-item">
+            <img src="ropa22.webp" alt="Abrigo con gorro para perros grandes">
+            <h3>Abrigo con gorro para perros grandes</h3>
+            <p class="price">S/60</p>
+            <button class="add-to-cart" data-id="22" data-name="Abrigo con gorro para perros grandes" data-price="60" data-image="ropa22.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 23 -->
+        <div class="product-item">
+            <img src="ropa23.webp" alt="Chaqueta elegante para perros">
+            <h3>Chaqueta elegante para perros</h3>
+            <p class="price">S/38</p>
+            <button class="add-to-cart" data-id="23" data-name="Chaqueta elegante para perros" data-price="38" data-image="ropa23.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 24 -->
+        <div class="product-item">
+            <img src="ropa24.jpg" alt="Camiseta sin mangas para perros">
+            <h3>Camiseta sin mangas para perros</h3>
+            <p class="price">S/22.50</p>
+            <button class="add-to-cart" data-id="24" data-name="Camiseta sin mangas para perros" data-price="22.50" data-image="ropa24.avif">Añadir</button>
+        </div>
+
+    </div>
+</section>
+
+<script src="carrito.js"></script>
+</body>
+</html>

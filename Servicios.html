@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago - Petlover</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .payment-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 50px auto;
+        }
+
+        .payment-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .payment-form input,
+        .payment-form select,
+        .payment-form button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .payment-form button {
+            background-color: #00b4d8;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-form button:hover {
+            background-color: #009cb3;
+        }
+
+        .pay-info {
+            font-size: 16px;
+            color: #333;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .pay-info span {
+            font-weight: bold;
+            color: #00b4d8;
+        }
+
+        .pay-info .highlight {
+            font-size: 18px;
+            color: #f44336;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content">
+            <img src="imagenes/logo.png" alt="Logo de Petlover">
+            <nav>
+                <a href="index.html" class="active">Inicio</a>
+                <a href="Nosotros.html">Nosotros</a> <!-- Enlace actualizado -->
+                <a href="Servicios.html">Servicios</a>
+                <a href="productos.html">Productos</a>
+                <a href="cesta.html">Cesta</a>
+                <a href="contacto.html">Contactos</a>
+            </nav>
+        </div>
+    </header>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios de Petlover - Conoce los servicios que ofrecemos para el bienestar de tu mascota.">
+    <meta name="keywords" content="veterinaria, salud animal, servicios veterinarios, mascotas">
+    <meta name="author" content="Petlover">
+    <title>Servicios | Petlover</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        /* Sección de descripción */
+        .descripcionpetlover {
+            padding: 120px 50px 50px 50px; /* Espaciado superior ajustado por el header fijo */
+            position: relative;
+            color: white;
+            background-image: url('nosotros 1.jpeg'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .descripcionpetlover .texto {
+            max-width: 50%;
+            text-align: left;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        .descripcionpetlover h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+
+        .descripcionpetlover p {
+            font-size: 1.2em;
+        }
+
+        /* Estilos para la sección de servicios */
+        .servicios-section {
+            padding: 40px 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            background-color: #ffffff;
+        }
+
+        .servicio {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .servicio:hover {
+            transform: translateY(-10px);
+        }
+
+        .servicio img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que las imágenes se ajusten sin distorsionarse */
+            max-height: 250px; /* Ajusta el tamaño máximo de las imágenes */
+        }
+
+        .servicio h3 {
+            font-size: 1.8em;
+            text-align: center;
+            margin: 20px;
+            color: #333;
+        }
+
+        .servicio p {
+            font-size: 1.1em;
+            color: #555;
+            padding: 0 15px 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sección de descripción -->
+    <section>
+        <div class="descripcionpetlover">
+            <div class="texto">
+                <h1>Servicios</h1>
+                <p>En Petlover, ofrecemos una gama de servicios veterinarios diseñados para el cuidado integral de tu mascota. Nuestro equipo de profesionales se dedica a brindar la mejor atención posible, con tecnología de vanguardia y un enfoque personalizado.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de servicios -->
+    <section>
+        <h2 style="text-align:center; color: #333; font-size: 2.5em; font-weight: bold; margin-bottom: 50px; text-transform: uppercase;">Lo que hacemos por tu mascota</h2>
+        <div class="servicios-section">
+            <!-- Servicio 1 -->
+            <div class="servicio">
+                <img src="ser1.jpg" alt="Cirugía Veterinaria">
+                <h3>Cirugía Veterinaria</h3>
+                <p>Ofrecemos servicios de cirugía para tratar diversas condiciones médicas. Nuestro equipo de especialistas asegura la mejor atención postoperatoria para tu mascota.</p>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div class="servicio">
+                <img src="ser2.png" alt="Medicina Preventiva">
+                <h3>Medicina Preventiva</h3>
+                <p>Realizamos chequeos regulares y vacunaciones para garantizar la salud de tu mascota. La prevención es clave para una vida saludable.</p>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div class="servicio">
+                <img src="ser3.png" alt="Dermatología Veterinaria">
+                <h3>Dermatología Veterinaria</h3>
+                <p>Tratamos enfermedades de la piel y alergias, utilizando las técnicas más avanzadas para mejorar el bienestar de tu mascota.</p>
+            </div>
+
+            <!-- Servicio 4 -->
+            <div class="servicio">
+                <img src="ser4.png" alt="Emergencias 24/7">
+                <h3>Emergencias 24/7</h3>
+                <p>Estamos disponibles para emergencias las 24 horas, los 7 días de la semana. Tu mascota estará en las mejores manos en momentos críticos.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

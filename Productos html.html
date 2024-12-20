@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <title>Productos - Petlover</title>
+</head>
+<body>
+<header>
+    <div class="content">
+        <img src="imagenes/logo.png" alt="logo Petlover">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<section class="content">
+    <h1>Nuestros Productos</h1>
+    <div class="productos">
+        <div class="producto">
+            <img src="imagenes/producto1.png" alt="Comida para perros">
+            <h3>Comida para perros</h3>
+            <p class="precio">Precio: $500</p>
+            <p>Alimento premium para perros adultos.</p>
+            <button onclick="agregarAlCarrito('Comida para perros', 500)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="imagenes/producto2.png" alt="Juguete para gatos">
+            <h3>Juguete para gatos</h3>
+            <p class="precio">Precio: $200</p>
+            <p>Juguete interactivo para gatos.</p>
+            <button onclick="agregarAlCarrito('Juguete para gatos', 200)">Agregar al carrito</button>
+        </div>
+    </div>
+</section>
+
+<section id="carrito" class="content">
+    <h1>Carrito de Compras</h1>
+    <div id="contenido-carrito" class="carrito">
+        <p>Tu carrito está vacío.</p>
+    </div>
+</section>
+
+<script>
+    let carrito = [];
+
+    function agregarAlCarrito(producto, precio) {
+        carrito.push({ producto, precio });
+        actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+        const carritoDiv = document.getElementById('contenido-carrito');
+        if (carrito.length === 0) {
+            carritoDiv.innerHTML = '<p>Tu carrito está vacío.</p>';
+        } else {
+            let contenido = '<table>';
+            let total = 0;
+            contenido += `
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>`;
+            carrito.forEach((item) => {
+                contenido += `
+                    <tr>
+                        <td>${item.producto}</td>
+                        <td>$${item.precio}</td>
+                    </tr>`;
+                total += item.precio;
+            });
+            contenido += `
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>$${total}</strong></td>
+                </tr>
+            </table>`;
+            carritoDiv.innerHTML = contenido;
+        }
+    }
+    
+</script>
+</body>
+</html>

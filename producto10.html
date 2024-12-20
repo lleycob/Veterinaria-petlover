@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Petlover</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        /* Estilo de los productos */
+        .product-details {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .product-category-header h2 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .product-category {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .product-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-item h3 {
+            color: #333;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .product-item p {
+            color: #666;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .product-item .price {
+            color: #00b4d8;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .product-item .offer-price {
+            color: red;
+            text-decoration: line-through;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        .add-to-cart {
+            background-color: #00b4d8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: #009cb3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content">
+            <img src="imagenes/logo.png" alt="Logo de Petlover">
+            <nav>
+                <a href="index.html" class="active">Inicio</a>
+                <a href="Nosotros.html">Nosotros</a> <!-- Enlace actualizado -->
+                <a href="Servicios.html">Servicios</a>
+                <a href="productos.html">Productos</a>
+                <a href="cesta.html">Cesta</a>
+                <a href="contacto.html">Contactos</a>
+            </nav>
+        </div>
+    </header>
+
+<section class="product-details">
+    <div class="product-category-header">
+        <h2>Alimentos Húmedos para Perros y Gatos</h2>
+    </div>
+
+    <div class="product-category">
+        <!-- Producto 1 -->
+        <div class="product-item">
+            <img src="lata1.avif" alt="Alimento Húmedo Origens Atún y Corvina">
+            <h3>Alimento Húmedo Origens Atún y Corvina x 85 gr / 12 Unidades</h3>
+            <p class="price">S/ 90</p>
+            <p class="offer-price">S/ 78</p>
+            <button class="add-to-cart" data-id="1" data-name="Alimento Húmedo Origens Atún y Corvina x 85 gr / 12 Unidades" data-price="90" data-image="lata1.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-item">
+            <img src="lata2.avif" alt="Alimento Húmedo Origens Atún y Piña">
+            <h3>Alimento Húmedo Origens Atún y Piña x 85 gr / 12 Unidades</h3>
+            <p class="price">S/ 90</p>
+            <p class="offer-price">S/ 78</p>
+            <button class="add-to-cart" data-id="2" data-name="Alimento Húmedo Origens Atún y Piña x 85 gr / 12 Unidades" data-price="90" data-image="lata2.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-item">
+            <img src="lata3.avif" alt="Alimento Húmedo Cat Chow Adultos Pollo">
+            <h3>Alimento Húmedo Cat Chow Adultos Pollo 85 gr</h3>
+            <p class="price">S/ 5.50</p>
+            <button class="add-to-cart" data-id="3" data-name="Alimento Húmedo Cat Chow Adultos Pollo 85 gr" data-price="5.50" data-image="lata3.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product-item">
+            <img src="lata4.avif" alt="Alimento Húmedo Cat Chow Adultos Pescado">
+            <h3>Alimento Húmedo Cat Chow Adultos Pescado 85 gr</h3>
+            <p class="price">S/ 5.50</p>
+            <button class="add-to-cart" data-id="4" data-name="Alimento Húmedo Cat Chow Adultos Pescado 85 gr" data-price="5.50" data-image="lata4.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="product-item">
+            <img src="lata5.avif" alt="Alimento Húmedo Cat Chow Gatitos Pollo">
+            <h3>Alimento Húmedo Cat Chow Gatitos Pollo 85 gr</h3>
+            <p class="price">S/ 5.50</p>
+            <button class="add-to-cart" data-id="5" data-name="Alimento Húmedo Cat Chow Gatitos Pollo 85 gr" data-price="5.50" data-image="lata5.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="product-item">
+            <img src="lata6.avif" alt="Alimento Húmedo Cat Chow Esterilizados Pescado">
+            <h3>Alimento Húmedo Cat Chow Esterilizados con Pescado 85 gr</h3>
+            <p class="price">S/ 5.50</p>
+            <button class="add-to-cart" data-id="6" data-name="Alimento Húmedo Cat Chow Esterilizados con Pescado 85 gr" data-price="5.50" data-image="lata6.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="product-item">
+            <img src="lata7.avif" alt="Alimento Húmedo Origens Atún y Aceituna">
+            <h3>Alimento Húmedo Origens Atún y Aceituna x 85 gr / 12 Unidades</h3>
+            <p class="price">S/ 90</p>
+            <p class="offer-price">S/ 78</p>
+            <button class="add-to-cart" data-id="7" data-name="Alimento Húmedo Origens Atún y Aceituna x 85 gr / 12 Unidades" data-price="90" data-image="lata7.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="product-item">
+            <img src="lata8.avif" alt="Alimento Húmedo Par Pets Carne">
+            <h3>Alimento Húmedo Par Pets Carne x 160 gr / 6 Unidades</h3>
+            <p class="price">S/ 90</p>
+            <p class="offer-price">S/ 78</p>
+            <button class="add-to-cart" data-id="8" data-name="Alimento Húmedo Par Pets Carne x 160 gr / 6 Unidades" data-price="90" data-image="lata8.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 9 -->
+        <div class="product-item">
+            <img src="lata9.avif" alt="Alimento Húmedo Purina One Adulto Esterilizado">
+            <h3>Alimento Húmedo Purina One Adulto y Esterilizado Supernutrientes 85 gr</h3>
+            <p class="price">S/ 7.90</p>
+            <p class="offer-price">S/ 6</p>
+            <button class="add-to-cart" data-id="9" data-name="Alimento Húmedo Purina One Adulto y Esterilizado Supernutrientes 85 gr" data-price="7.90" data-image="lata9.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 10 -->
+        <div class="product-item">
+            <img src="lata10.avif" alt="Alimento Húmedo Purina One Adultos Multiproteína">
+            <h3>Alimento Húmedo Purina One Adultos y Gatitos Multiproteína 85 gr</h3>
+            <p class="price">S/ 7.90</p>
+            <button class="add-to-cart" data-id="10" data-name="Alimento Húmedo Purina One Adultos y Gatitos Multiproteína 85 gr" data-price="7.90" data-image="lata10.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 11 -->
+        <div class="product-item">
+            <img src="lata11.avif" alt="Alimento Húmedo Purina One Perro Salmón">
+            <h3>Alimento Húmedo Purina One Perro Adulto y Cachorro Sabor Salmón 85 gr</h3>
+            <p class="price">S/ 7.90</p>
+            <button class="add-to-cart" data-id="11" data-name="Alimento Húmedo Purina One Perro Adulto y Cachorro Sabor Salmón 85 gr" data-price="7.90" data-image="lata11.avif">Añadir</button>
+        </div>
+
+        <!-- Producto 12 -->
+        <div class="product-item">
+            <img src="lata 12.avif" alt="Alimento Húmedo Purina One Perro Carne, Pollo y Cordero">
+            <h3>Alimento Húmedo Purina One Perro Adulto y Cachorro Sabor Carne, Pollo y Cordero 85 gr</h3>
+            <p class="price">S/ 7.90</p>
+            <p class="offer-price">S/ 6</p>
+            <button class="add-to-cart" data-id="12" data-name="Alimento Húmedo Purina One Perro Adulto y Cachorro Sabor Carne, Pollo y Cordero 85 gr" data-price="7.90" data-image="lata12.avif">Añadir</button>
+        </div>
+    </div>
+</section>
+
+<script src="carrito.js"></script>
+</body>
+</html>
